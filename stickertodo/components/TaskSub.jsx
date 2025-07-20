@@ -60,7 +60,7 @@ export default function TaskSub({task, onUpdateTask}) {
                         <li key={index}>
                             
                             <span
-                                className={`ml-2 text-base ${sub.complete ? 'line-through text-gray-400' : 'text-white'
+                                className={`ml-2 text-base ${sub.complete ? 'line-through text-gray-400' : 'text-gray-800'
                                     }`}
                             >
                                 {sub.text}
@@ -83,19 +83,6 @@ export default function TaskSub({task, onUpdateTask}) {
 
             <div></div>
         </div>
-        // <div>
-        //     <h1>task.data</h1>
-        //     <ul>
-        //         {data.map((todo, index) => (
-        //             <div key={index} className="flex">
-        //                 <p>{todo.text}</p>
-        //                 <button onClick={() => deleteTodo(index)}>🗑️</button>
-        //                 <button onClick={() => completeTodo(index)} key={index}>{todo.complete ? "✅" : "⬜"}</button>
-        //             </div>
-
-        //         ))}
-        //     </ul>
-            
-        // </div>
+        
     )
 }

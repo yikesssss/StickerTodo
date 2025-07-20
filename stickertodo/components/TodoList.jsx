@@ -41,38 +41,27 @@ export default function TodoList() {
     }
 
     return (
-        <div>
+        <div className="mt-5">
             {todos.length === 0 ? (
                 <p>No tasks to accomplish yet</p>
             ) : (
                 <ul>
                     {todos.map((todo, index) => (
-                        <li key={todo.id}>
+                        <li key={todo.id} className="border rounded p-2 m-1 mb-4 flex justify-between items-center">
                             <Link href={`/tasks/${todo.id}`}>{todo.text}</Link>
-                            <input type="checkbox"
-                            checked={todo.complete}
-                            onChange={() => completeTodo(todo.id)}></input>
-                            <button onClick={() => deleteTodo(todo.id)}>🗑️</button>
-                            {/* <button onClick={() => completeTodo(todo.id)}></button> */}
+                            <div>
+                                <input type="checkbox"
+                                    className="h-5 w-5 border-5 mr-7"
+                                    checked={todo.complete}
+                                    onChange={() => completeTodo(todo.id)}></input>
+                                <button onClick={() => deleteTodo(todo.id)}>🗑️</button>
+                            </div>
+                            
                         </li>
                     ))}
                 </ul>
             )}
         </div>
-        // <table>
-        //     <thead>
-        //         <tr>
-        //             <th>Task Name</th>
-        //             <th>Is done?</th>
-        //         </tr>
-        //     </thead>
-        //     <tbody>
-        //         <tr>
-        //             <td>go to park</td>
-        //             <td>[ ]</td>
-        //         </tr>
-        //     </tbody>
-            
-        // </table>
+        
     )
 }

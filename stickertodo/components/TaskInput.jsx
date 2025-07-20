@@ -22,21 +22,20 @@ export default function TaskInput() {
     }
 
     return(
-        <div>
-            <div>
-                <label>Add new task: </label>
-                <input value={input}
-                    type="text"
-                    placeholder="Go to the circus"
-                    onChange={(e) => { setInput(e.target.value) }}
-                    onKeyDown={(e) => {
-                        if (e.key === "Enter") {
-                            e.preventDefault();
-                            addNewTodo();
-                        }
-                    }}></input>
-            </div>
-            <button onClick={addNewTodo}>+</button>
+        <div className="mt-7 flex">
+            <label className="pr-2">Add new task: </label>
+            <input value={input}
+                className="border-b  w-3/4"
+                type="text"
+                placeholder="Go to the circus"
+                onChange={(e) => { setInput(e.target.value) }}
+                onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                        e.preventDefault();
+                        addNewTodo();
+                    }
+                }}></input>
+            <button className="ml-4"onClick={addNewTodo}>➕</button>
         </div>
         
 

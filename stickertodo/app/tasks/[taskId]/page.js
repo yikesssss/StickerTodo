@@ -82,7 +82,7 @@ export default function TaskDetails() {
 
     return(
         <div>
-            <h1>{task.text}</h1>
+            <h1 className="text-center text-3xl font-bold">{task.text}</h1>
 
             <hr/>
 
