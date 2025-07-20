@@ -52,7 +52,8 @@ export default function TaskInput() {
     return(
         <div>
             <div className="flex">
-                <h3>Add new task: </h3>
+                {/* <h3>Add new task: </h3> */}
+                <label>Add new task: </label>
                 <input
                     value={input}
                     type="text"
