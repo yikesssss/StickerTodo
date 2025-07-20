@@ -82,13 +82,13 @@ export default function TaskDetails() {
 
     return(
         <div>
-            <h1 className="text-center text-3xl font-bold">{task.text}</h1>
+            <h1 className="text-center text-3xl font-bold mb-4">{task.text}</h1>
 
             <hr/>
 
             <TaskSub task={task} onUpdateTask={updateTaskStorage} />
             
-            <p>this is where the suggested subs would go</p>
+            
         </div>
         
     )
